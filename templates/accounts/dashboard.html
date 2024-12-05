@@ -1,0 +1,54 @@
+{% extends 'frontEnd/base.html' %} {% load static %} {% block content %}
+
+<section class="section-conten padding-y bg">
+  <div class="container-fluid">
+    {% include 'frontEnd/includes/alerts.html' %}
+
+    <div class="row">
+      {% include 'frontEnd/includes/dashboard_sidebar.html' %}
+
+      <main class="col-md-9">
+        <article class="card">
+          <header class="card-header">
+            <strong class="d-inline-block mr-1">Logged in as:</strong>
+            <span style="font-weight: bold; color: green;"> {{ user.full_name }} </span>
+          </header>
+
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card" style="text-align: center">
+                  <div class="card-body">
+                    <h5 class="card-title">Total Orders</h5>
+                    <h4>{{ orders_count }}</h4>
+                    <a class="card-link-order" href="{% url 'my_orders' %}"> View Orders </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card" style="text-align: center">
+                  <div class="card-body">
+                    <img
+                      src="{{ userprofile.profile_picture.url }}"
+                      alt="User Profile Pic"
+                      width="40"
+                      height="40"
+                      style="border-radius: 50%; margin-bottom: 0.6em; border: 5px solid green;"
+                    />
+                    <p class="">{{ user.email }}</p>
+                    <p class="" style="margin-top: -1em">
+                      {{ user.phone_number }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

@@ -601,6 +601,22 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -618,6 +634,14 @@
     },
     {
         "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -915,6 +939,14 @@
         "documentation": {}
     },
     {
+        "label": "send_message",
+        "importPath": "utils.kafka_producer",
+        "description": "utils.kafka_producer",
+        "isExtraImport": true,
+        "detail": "utils.kafka_producer",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -972,6 +1004,14 @@
         "documentation": {}
     },
     {
+        "label": "BaseCommand",
+        "importPath": "django.core.management.base",
+        "description": "django.core.management.base",
+        "isExtraImport": true,
+        "detail": "django.core.management.base",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "kind": 6,
         "isExtraImport": true,
@@ -987,6 +1027,23 @@
         "importPath": "json",
         "description": "json",
         "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
         "documentation": {}
     },
     {
@@ -1044,6 +1101,30 @@
         "description": "django.core.paginator",
         "isExtraImport": true,
         "detail": "django.core.paginator",
+        "documentation": {}
+    },
+    {
+        "label": "Consumer",
+        "importPath": "confluent_kafka",
+        "description": "confluent_kafka",
+        "isExtraImport": true,
+        "detail": "confluent_kafka",
+        "documentation": {}
+    },
+    {
+        "label": "KafkaException",
+        "importPath": "confluent_kafka",
+        "description": "confluent_kafka",
+        "isExtraImport": true,
+        "detail": "confluent_kafka",
+        "documentation": {}
+    },
+    {
+        "label": "Producer",
+        "importPath": "confluent_kafka",
+        "description": "confluent_kafka",
+        "isExtraImport": true,
+        "detail": "confluent_kafka",
         "documentation": {}
     },
     {
@@ -1519,7 +1600,7 @@
         "kind": 5,
         "importPath": "greatkart.settings",
         "description": "greatkart.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'greatkart.wsgi.application'\nAUTH_USER_MODEL = 'accounts.Account'\n# Database\n# https://docs.djangoproject.com/en/3.1/ref/settings/#databases\nif 'RDS_DB_NAME' in os.environ:\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.postgresql',\n            'NAME': os.environ['RDS_DB_NAME'],\n            'USER': os.environ['RDS_USERNAME'],",
+        "peekOfCode": "WSGI_APPLICATION = 'greatkart.wsgi.application'\nAUTH_USER_MODEL = 'accounts.Account'\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nKAFKA_BROKER_URL = 'localhost:9092'\n# Database\n# https://docs.djangoproject.com/en/3.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',",
         "detail": "greatkart.settings",
         "documentation": {}
     },
@@ -1528,7 +1609,34 @@
         "kind": 5,
         "importPath": "greatkart.settings",
         "description": "greatkart.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'accounts.Account'\n# Database\n# https://docs.djangoproject.com/en/3.1/ref/settings/#databases\nif 'RDS_DB_NAME' in os.environ:\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.postgresql',\n            'NAME': os.environ['RDS_DB_NAME'],\n            'USER': os.environ['RDS_USERNAME'],\n            'PASSWORD': os.environ['RDS_PASSWORD'],",
+        "peekOfCode": "AUTH_USER_MODEL = 'accounts.Account'\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nKAFKA_BROKER_URL = 'localhost:9092'\n# Database\n# https://docs.djangoproject.com/en/3.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }",
+        "detail": "greatkart.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "greatkart.settings",
+        "description": "greatkart.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nKAFKA_BROKER_URL = 'localhost:9092'\n# Database\n# https://docs.djangoproject.com/en/3.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}",
+        "detail": "greatkart.settings",
+        "documentation": {}
+    },
+    {
+        "label": "KAFKA_BROKER_URL",
+        "kind": 5,
+        "importPath": "greatkart.settings",
+        "description": "greatkart.settings",
+        "peekOfCode": "KAFKA_BROKER_URL = 'localhost:9092'\n# Database\n# https://docs.djangoproject.com/en/3.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# DATABASES = {",
+        "detail": "greatkart.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "greatkart.settings",
+        "description": "greatkart.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# DATABASES = {\n# 'default': {\n#     'ENGINE': 'mysql.connector.django',\n#     'NAME': 'class_assigment_db',",
         "detail": "greatkart.settings",
         "documentation": {}
     },
@@ -1722,6 +1830,15 @@
         "documentation": {}
     },
     {
+        "label": "Command",
+        "kind": 6,
+        "importPath": "orders.management.commands.export_orders",
+        "description": "orders.management.commands.export_orders",
+        "peekOfCode": "class Command(BaseCommand):\n    help = 'Export orders to a CSV file'\n    def handle(self, *args, **options):\n        from orders.models import Order  # Import here to avoid circular issues\n        import csv\n        output_file = 'orders_export.csv'\n        with open(output_file, 'w', newline='') as file:\n            writer = csv.writer(file)\n            writer.writerow(['Order ID', 'User ID', 'Order Total', 'Date Created'])\n            orders = Order.objects.all()",
+        "detail": "orders.management.commands.export_orders",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "orders.migrations.0001_initial",
@@ -1816,7 +1933,7 @@
         "kind": 5,
         "importPath": "orders.urls",
         "description": "orders.urls",
-        "peekOfCode": "urlpatterns = [\n    path('place_order/', views.place_order, name='place_order'),\n    path('payments/', views.payments, name='payments'),\n    path('order_complete/', views.order_complete, name='order_complete'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('place_order/', views.place_order, name='place_order'),\n    path('payments/', views.payments, name='payments'),\n    path('order_complete/', views.order_complete, name='order_complete'),\n    path('total-sales/', views.total_sales, name='total_sales'),\n]",
         "detail": "orders.urls",
         "documentation": {}
     },
@@ -1844,6 +1961,15 @@
         "importPath": "orders.views",
         "description": "orders.views",
         "peekOfCode": "def order_complete(request):\n    order_number = request.GET.get('order_number')\n    transID = request.GET.get('payment_id')\n    try:\n        order = Order.objects.get(order_number=order_number, is_ordered=True)\n        ordered_products = OrderProduct.objects.filter(order_id=order.id)\n        payment = Payment.objects.get(payment_id=transID)\n        subtotal = 0\n        for i in ordered_products:\n            subtotal += i.product_price * i.quantity",
+        "detail": "orders.views",
+        "documentation": {}
+    },
+    {
+        "label": "total_sales",
+        "kind": 2,
+        "importPath": "orders.views",
+        "description": "orders.views",
+        "peekOfCode": "def total_sales(request):\n    csv_file = \"orders_export.csv\"  # Path to your exported orders CSV\n    mapped_data = []\n    # Read the CSV and map the data\n    with open(csv_file, 'r') as file:\n        reader = csv.DictReader(file)\n        for row in reader:\n            user_id = row['User ID']\n            order_total = float(row['Order Total'])\n            mapped_data.append((user_id, order_total))",
         "detail": "orders.views",
         "documentation": {}
     },
@@ -2079,6 +2205,42 @@
         "description": "store.views",
         "peekOfCode": "def submit_review(request, product_id):\n    url = request.META.get('HTTP_REFERER')\n    if request.method == 'POST':\n        try:\n            reviews = ReviewRating.objects.get(\n                user__id=request.user.id, product__id=product_id)\n            form = ReviewForm(request.POST, instance=reviews)\n            form.save()\n            messages.success(\n                request, 'Thank you! Your review has been updated.')",
         "detail": "store.views",
+        "documentation": {}
+    },
+    {
+        "label": "consume_messages",
+        "kind": 2,
+        "importPath": "utils.kafka_consumer",
+        "description": "utils.kafka_consumer",
+        "peekOfCode": "def consume_messages(topic):\n    consumer_config = {\n        'bootstrap.servers': 'localhost:9092',\n        'group.id': 'orders-group',\n        'auto.offset.reset': 'earliest',  # Start consuming from the earliest message\n    }\n    consumer = Consumer(consumer_config)\n    try:\n        consumer.subscribe([topic])\n        print(f\"Subscribed to topic: {topic}\")",
+        "detail": "utils.kafka_consumer",
+        "documentation": {}
+    },
+    {
+        "label": "get_kafka_producer",
+        "kind": 2,
+        "importPath": "utils.kafka_producer",
+        "description": "utils.kafka_producer",
+        "peekOfCode": "def get_kafka_producer():\n    producer_config = {\n        'bootstrap.servers': 'localhost:9092',  # Kafka broker address\n    }\n    return Producer(producer_config)\ndef delivery_report(err, msg):\n    \"\"\"\n    Callback for delivery reports from the broker.\n    This method will be called for each message produced.\n    \"\"\"",
+        "detail": "utils.kafka_producer",
+        "documentation": {}
+    },
+    {
+        "label": "delivery_report",
+        "kind": 2,
+        "importPath": "utils.kafka_producer",
+        "description": "utils.kafka_producer",
+        "peekOfCode": "def delivery_report(err, msg):\n    \"\"\"\n    Callback for delivery reports from the broker.\n    This method will be called for each message produced.\n    \"\"\"\n    if err:\n        print(f\"Message delivery failed: {err}\")\n    else:\n        print(f\"Message delivered to {msg.topic()} [{msg.partition()}] at offset {msg.offset()}\")\ndef send_message(topic, message):",
+        "detail": "utils.kafka_producer",
+        "documentation": {}
+    },
+    {
+        "label": "send_message",
+        "kind": 2,
+        "importPath": "utils.kafka_producer",
+        "description": "utils.kafka_producer",
+        "peekOfCode": "def send_message(topic, message):\n    producer = get_kafka_producer()\n    try:\n        # Serialize the message to JSON\n        serialized_message = json.dumps(message)\n        # Send the message with a callback to check delivery status\n        producer.produce(topic, value=serialized_message, callback=delivery_report)\n        # Ensure all messages are delivered before exiting\n        producer.flush()\n        print(f\"Message sent to topic '{topic}': {message}\")",
+        "detail": "utils.kafka_producer",
         "documentation": {}
     },
     {

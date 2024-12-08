@@ -1,0 +1,6 @@
+<h1>Total Sales Per User</h1>
+<ul>
+    {% for user_id, total_sales in sales_data.items %}
+        <li>User {{ user_id }}: ${{ total_sales }}</li>
+    {% endfor %}
+</ul>

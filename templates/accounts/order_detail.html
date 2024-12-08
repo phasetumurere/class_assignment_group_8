@@ -18,7 +18,7 @@
             <div class="col-lg-6">
               <div class="invoice-logo">
                 <img
-                  src="{% static 'images/logo-color-on-transparent-background.png' %}"
+                  src="{% static 'images/logo.png' %}"
                   alt="Invoice logo"
                   style="max-height: 40px"
                 />
@@ -82,13 +82,13 @@
                             </div>
                             <div>
                               {% if item.variations.all %}
-                                {% for i in item.variations.all %}
-                                  {{ i.variation_category | capfirst }} :
-                                  <span style="font-weight: bold;">
-                                    {{ i.variation_value | capfirst }}
-                                  </span>
-                                  <br />
-                                {% endfor %}
+                              {% for i in item.variations.all %}
+                              {{ i.variation_category | capfirst }} :
+                              <span style="font-weight: bold;">
+                                {{ i.variation_value | capfirst }}
+                              </span>
+                              <br />
+                              {% endfor %}
                               {% endif %}
                             </div>
                           </div>

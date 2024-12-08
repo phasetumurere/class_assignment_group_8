@@ -176,3 +176,30 @@ def order_complete(request):
         return render(request, template_name, context)
     except (Payment.DoesNotExist, Order.DoesNotExist):
         return redirect('home')
+
+from django.shortcuts import render
+from collections import defaultdict
+import csv
+
+def total_sales(request):
+    csv_file = "orders_export.csv"  # Path to your exported orders CSV
+    mapped_data = []
+    
+    # Read the CSV and map the data
+    with open(csv_file, 'r') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            user_id = row['User ID']
+            order_total = float(row['Order Total'])
+            mapped_data.append((user_id, order_total))
+
+    # Reduce phase: Aggregate totals by user
+    reduced_data = defaultdict(float)
+    for user_id, order_total in mapped_data:
+        reduced_data[user_id] += order_total
+
+    # Convert defaultdict to a regular dictionary
+    sales_data = dict(reduced_data)
+
+    # Send results to the template
+    return render(request, 'frontEnd/orders/total_sales.html', {'sales_data': sales_data})
